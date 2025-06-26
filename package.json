@@ -1,0 +1,7 @@
+{
+  "name": "og-scrapper-api",
+  "version": "0.0.1",
+  "main": "server.js",
+  "author": "BuHogeJI",
+  "license": "MIT"
+}
