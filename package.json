@@ -3,5 +3,11 @@
   "version": "0.0.1",
   "main": "server.js",
   "author": "BuHogeJI",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.10.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "linkedom": "^0.18.11"
+  }
 }
