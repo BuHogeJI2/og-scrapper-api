@@ -33,6 +33,9 @@ app.get("/api/link-preview", async (req, res) => {
   if (!url) return res.status(400).json({ error: "URL parameter is required" });
 
   try {
+    // todo: investigate
+    // for some reason response from banch of site has empty content for meta tags
+    // ex. <meta property="og:image" content="">
     const response = await axiosInstance.get(url, {
       maxRedirects: 10,
       beforeRedirect(options) {
