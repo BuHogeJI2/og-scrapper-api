@@ -25,13 +25,10 @@ export function handleError(err, res) {
 }
 
 export function getMeta(document, name) {
-  const property = `og:${name}`;
+  const meta = document.querySelector(`meta[property="${name}"]`);
 
-  const element = document.querySelector(
-    `meta[property="${property}"],
-     meta[property="${property.toLowerCase()}"],
-     meta[name="${property}"]`,
-  );
+  if (meta?.content) return meta.content;
+  if (meta?.getAttribute?.("content")) return meta.getAttribute("content");
 
-  return element?.getAttribute("content") || null;
+  return null;
 }
